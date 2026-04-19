@@ -507,7 +507,7 @@
         <div class="layer-sub">Intra-credit-web institutional &middot; high-frequency mid-ticket</div>
         <div class="layer-name">Tokenized deposit transfers within correspondent networks</div>
         <div class="layer-desc">Bank-to-bank and treasury transfers where both counterparties hold accounts at participating institutions. Ticket sizes from millions to low billions. Tokenized commercial bank money within the issuer's credit web. Ripple Payments is an institutional rail with 300+ customers (SBI, Deutsche Bank, Santander, etc.) offering XRP, RLUSD, or third-party stablecoin routing.</div>
-        <div class="layer-actors">KINEXYS &middot; SWIFT LEDGER &middot; HSBC TOKENIZED DEPOSITS &middot; PARTIOR &middot; <strong>RIPPLE PAYMENTS / XRP / RLUSD</strong></div>
+        <div class="layer-actors">KINEXYS &middot; SWIFT LEDGER &middot; HSBC TOKENIZED DEPOSITS &middot; PARTIOR &middot; XDC / R3 CORDA &middot; <strong>RIPPLE PAYMENTS / XRP / RLUSD</strong></div>
       </div>
     </div>
 
@@ -517,7 +517,7 @@
         <div class="layer-sub">Intra-jurisdiction wholesale &middot; mid-frequency high-ticket</div>
         <div class="layer-name">DLT-based wholesale settlement in central bank money</div>
         <div class="layer-desc">Interbank wholesale settlement within a single currency jurisdiction. Tokenized claims on central bank reserves for atomic PvP and DvP. Ticket sizes from hundreds of millions to tens of billions. XRPL hosts institutional wholesale activity: SG-FORGE EUR CoinVertible, SBI's ¥10B blockchain bond, Korea's Kyobo Life partnership for bond settlement.</div>
-        <div class="layer-actors">FNALITY (£, $, € IN ROLLOUT) &middot; WHOLESALE CBDC PILOTS &middot; STELLAR / FRANKLIN TEMPLETON &middot; <strong>XRPL HOSTED WHOLESALE INSTRUMENTS</strong></div>
+        <div class="layer-actors">FNALITY (£, $, € IN ROLLOUT) &middot; WHOLESALE CBDC PILOTS &middot; STELLAR / FRANKLIN TEMPLETON &middot; SOLANA (FRANKLIN TEMPLETON, ONDO) &middot; <strong>XRPL HOSTED WHOLESALE INSTRUMENTS</strong></div>
       </div>
     </div>
 
@@ -590,13 +590,15 @@
 
   <p>CCIP and the bridge asset are complementary, not substitutes. CCIP handles the routing; the bridge asset provides the liquidity. A 2030 settlement architecture where Chainlink CCIP routes a Canton-to-XRPL-to-Ethereum atomic DvP <em>using XRP as the bridge-leg asset</em> is not hypothetical — it is consistent with the architecture that every one of the institutional participants in CCIP's production network is actually building toward. Notably, Stellar joined Chainlink Scale in October 2025 and is integrating CCIP; the 2030 architecture likely has XRP and XLM routed through CCIP as complementary bridge-liquidity assets, not competing with CCIP at all.</p>
 
-  <h3 class="subheader">Stellar is the co-architecture, not a counterexample</h3>
+  <h3 class="subheader">The bridge-asset design pattern has three live implementations</h3>
 
-  <p>The careful reader will have noticed that Stellar appears at multiple layers in the stack — at layer one via PayPal PYUSD and MoneyGram integration, at layer three via Franklin Templeton's tokenized money market fund, and at layer five alongside XRP in the DTCC patent. This is not a competitive threat to the bridge-asset thesis; it is confirmation of it. XRP and XLM share the same fundamental architecture: fixed-supply, jurisdiction-neutral, permissionless bridge assets with on-ledger exchange functionality. The DTCC patent names both because the bridge-asset design pattern is what DTCC is validating, not the specific coin.</p>
+  <p>The careful reader will have noticed that Stellar appears at multiple layers in the stack — at layer one via PayPal PYUSD and MoneyGram integration, at layer three via Franklin Templeton's tokenized money market fund, and at layer five alongside XRP in the DTCC patent. XDC also appears in the stack, at layer two, via its live integration with R3 Corda through the SBI XDC Network APAC joint venture. These are not competitive threats to the bridge-asset thesis; they are confirmation of it. XRP, XLM, and XDC share the same fundamental architecture: fixed-supply (or capped-supply), jurisdiction-neutral, permissionless bridge assets with on-ledger exchange functionality. The DTCC patent names XRP and XLM because the bridge-asset design pattern is what DTCC is validating, not the specific coin. XDC is the third live implementation of the pattern, with its own distinct institutional positioning — ISO 20022-native, purpose-built for trade finance, integrated into R3 Corda as a settlement vehicle, with SBI (also Ripple's largest Asian institutional partner) developing XDC infrastructure in parallel with its XRP work.</p>
 
-  <p>This paper focuses on XRP rather than XLM for three reasons, none of which undermine Stellar's structural role. First, the empirical evidence for cross-layer capture is materially stronger for XRP — Ripple the company has built an explicit institutional stack (Ripple Payments, RLUSD, Hidden Road, GTreasury, OCC trust bank charter) aimed at cross-layer flow, whereas the Stellar Development Foundation operates as a non-profit and has not pursued the same institutional-banking integration. Second, Garlinghouse's 14% of SWIFT claim provides a concrete and testable ambition for layer-one-through-four capture that Stellar does not have an equivalent for. Third, XRP's circulating float and market depth are roughly ten times Stellar's, which matters for the peak-ticket absorption constraint at layer five.</p>
+  <p>This paper focuses on XRP rather than on XLM or XDC for three reasons, none of which undermine the other implementations' structural roles. First, the empirical evidence for cross-layer capture is materially stronger for XRP — Ripple the company has built an explicit institutional stack (Ripple Payments, RLUSD, Hidden Road, GTreasury, OCC trust bank charter) aimed at cross-layer flow. Second, Garlinghouse's 14% of SWIFT claim provides a concrete and testable ambition that neither Stellar nor XDC has an equivalent for. Third, XRP's circulating float and market depth materially exceed both — roughly ten times Stellar's depth and substantially more than XDC's — which matters for the peak-ticket absorption constraint at layer five.</p>
 
-  <p>The correct framing is that the bridge-asset design pattern has two live implementations. XRP is the production leader by scale and institutional integration; XLM is the credible second implementation with its own institutional footprint, particularly in U.S. tokenized fund distribution. In scenarios where layer-five productionization happens via the DTCC patent's architecture, both assets participate. The sizing math in this paper is applied to XRP specifically, but a reader who preferred to apply it across XRP plus XLM combined would simply be running the same framework against a slightly larger bridge-asset market-cap denominator.</p>
+  <p>The correct framing is that the bridge-asset design pattern has three live implementations operating at institutional scale. XRP is the production leader by scale and institutional integration. XLM is named alongside XRP in the DTCC patent and has its own institutional footprint, particularly in U.S. tokenized fund distribution. XDC has a separate institutional pathway through R3 Corda's Corda Settler and the SBI XDC Network APAC joint venture. In scenarios where layer-five productionization happens via the DTCC architecture, all three are candidate assets. The sizing math in this paper is applied to XRP specifically, but a reader who preferred to distribute exposure across the three implementations would simply be running the same framework against a combined bridge-asset market-cap denominator.</p>
+
+  <p>What does <em>not</em> fit the bridge-asset design pattern: general-purpose smart contract L1s like Ethereum, Solana, Avalanche, and Sui. These are critical to the architecture — they are the tokenization <em>venues</em> where instruments like BlackRock's BUIDL, Ondo's OUSG, and Franklin Templeton's FOBXX are issued and traded. They host the assets. But their native tokens (ETH, SOL, AVAX, SUI) are gas/staking assets with ongoing inflation and consumption dynamics, not fixed-supply neutral intermediate liquidity assets. A USDC transfer on Solana uses USDC as the settlement asset; SOL is the gas token that pays for the transaction. The bridge-asset role requires a specific set of design features — fixed or capped supply, jurisdiction-neutral, permissionless, with on-ledger exchange — that general-purpose L1 tokens do not satisfy. This is not a preference; it is the structural reason the DTCC patent names XRP and XLM specifically rather than simply listing every major blockchain. The distinction matters because layer-five flow routes <em>through</em> bridge assets <em>between</em> tokenization venues. The venues and the bridge assets are complementary infrastructure, not competing categories.</p>
 
   <h3 class="subheader">Interoperability is not liquidity</h3>
 
@@ -669,6 +671,8 @@
   <p>Patents are not adoption. DTCC has also partnered with Digital Asset to tokenize U.S. Treasury securities on the Canton Network, with MVP targeted for the first half of 2026 and broader rollout in the second half. The Canton track is the production track for DTCC's tokenization pilot under the SEC no-action letter. The XRP/XLM track in the patent is the future-state track for cross-ledger liquidity routing between tokenization ecosystems — a capability the production Canton pilot does not yet include. During the pilot phase, tokenized entitlements carry no collateral or settlement value; the blockchain is the mirror, not the settlement rail. That is a deliberate limitation of the no-action relief, not a limitation of DTCC's architectural ambitions.</p>
 
   <p>What the patent signals is that DTCC has thought through the layer-five problem. They have named the asset class — fixed-supply, high-throughput, cross-chain-capable liquidity tokens — and they have named two specific candidate assets. The fact that one of them is XRP is not a Ripple marketing claim. It is a disclosure in a U.S. patent filing by the entity that sits at the center of $3.7 quadrillion in annual global settlement.</p>
+
+  <p>One honest clarification on asset scope. XDC — the third live implementation of the bridge-asset design pattern — is not named in this patent. Its institutional pathway to DTCC runs indirectly: R3 Corda is the foundational DLT for DTCC's Project Ion equities settlement platform (live since 2022 in parallel production at 100,000+ transactions per day), and XDC has a production bridge to Corda via the SBI XDC Network APAC joint venture. That is a credible but evidentiarily weaker connection than the direct patent naming for XRP and XLM. The 2026 Canton-based tokenization pilot that this paper focuses on does not currently involve XDC. Readers interpreting the bridge-asset thesis across all three implementations should weight XRP and XLM's evidentiary stack above XDC's for this specific layer-five story, while recognizing XDC's real institutional footprint elsewhere in the stack.</p>
 
   <p>No other institutional validation of the bridge-asset role at layer five exists at this level. The DTCC patent is the strongest single piece of forward-looking institutional evidence the thesis has.</p>
 
@@ -896,13 +900,21 @@
 
     <p style="margin-bottom: 8px;">Stablecoin Insider. <em>"Ripple Positions RLUSD as Bank-Grade Stablecoin in 2026,"</em> January 3, 2026.</p>
 
-    <p style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--crimson-deep); margin-top: 24px; margin-bottom: 10px;">Stellar Cross-Layer Activity</p>
+    <p style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--crimson-deep); margin-top: 24px; margin-bottom: 10px;">Co-Architecture Implementations &middot; Stellar, XDC, and Institutional Venues</p>
 
     <p style="margin-bottom: 8px;">Stellar Development Foundation. Q3/Q4 2025 ecosystem report. $5.4B quarterly RWA payment volume.</p>
 
     <p style="margin-bottom: 8px;">PayPal. PYUSD on Stellar deployment announcement, 2024-2025.</p>
 
-    <p style="margin-bottom: 8px;">Franklin Templeton. FOBXX tokenized money market fund on Stellar, institutional distribution.</p>
+    <p style="margin-bottom: 8px;">Franklin Templeton. FOBXX tokenized money market fund on Stellar and Solana, institutional distribution.</p>
+
+    <p style="margin-bottom: 8px;">SBI Group / SBI XDC Network APAC. <em>"XDC Network and R3 Corda Successfully Complete Inter-Business Settlement PoC,"</em> May 31, 2024.</p>
+
+    <p style="margin-bottom: 8px;">CoinDesk. <em>"R3 Corda Now Has a Bridge to Public Blockchains With Arrival of Ethereum-Based XDC,"</em> March 30, 2021. LAB577-built bridge, XDC as Corda settlement coin.</p>
+
+    <p style="margin-bottom: 8px;">Markets Media. <em>"R3's Corda Chosen for DTCC's Alternative Settlements,"</em> August 2022. Project Ion, 100,000+ transactions/day parallel production.</p>
+
+    <p style="margin-bottom: 8px;">Ledger Insights. <em>"R3 pivots to public blockchain with Solana partnership,"</em> May 22, 2025. Institutional RWA tokenization infrastructure.</p>
 
     <p style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--crimson-deep); margin-top: 24px; margin-bottom: 10px;">Market Structure and Tokenization Projections</p>
 
