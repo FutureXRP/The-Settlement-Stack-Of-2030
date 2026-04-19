@@ -598,6 +598,14 @@
 
   <p>The correct framing is that the bridge-asset design pattern has two live implementations. XRP is the production leader by scale and institutional integration; XLM is the credible second implementation with its own institutional footprint, particularly in U.S. tokenized fund distribution. In scenarios where layer-five productionization happens via the DTCC patent's architecture, both assets participate. The sizing math in this paper is applied to XRP specifically, but a reader who preferred to apply it across XRP plus XLM combined would simply be running the same framework against a slightly larger bridge-asset market-cap denominator.</p>
 
+  <h3 class="subheader">Interoperability is not liquidity</h3>
+
+  <p>One further distinction that matters and deserves naming explicitly, because it is the attack vector that a careful technical reader will construct. The earlier CCIP subsection argued that cross-chain interoperability protocols and bridge assets are complementary rather than competitive. The stronger version of that claim is this: <strong>interoperability and liquidity are different functions that run through every layer of the stack</strong>. Conflating them is the single most common error in the "XRP is obsolete" argument.</p>
+
+  <p>Interoperability is the orchestration function — how a settlement instruction travels between systems, how state is synchronized across ledgers, how compliance and messaging formats translate. Chainlink's CCIP does this via decentralized oracle networks. Quant's Overledger does this via a messaging abstraction layer. Canton's native privacy-preserving sync does this within its own application topology. All three are coordination infrastructure. None of them, by themselves, delivers destination-side liquidity. When a CCIP-orchestrated transaction requires $2 billion of asset Y on chain B, CCIP routes the instruction; it does not manufacture the asset. The liquidity has to come from somewhere — pre-funded pools, wrapped representations, or a bridge asset with globally pooled depth.</p>
+
+  <p>Bridge-asset liquidity is what XRP and XLM provide. It is a different layer of the settlement problem — not a competitor to CCIP but a functional complement. A mature 2030 architecture has CCIP (or equivalent) handling orchestration and XRP (or equivalent bridge asset) handling liquidity, operating together on the same peak-ticket settlement. The reason this paper focuses on bridge assets rather than on orchestration protocols is that orchestration is already solved at institutional scale — Chainlink has won that layer — whereas bridge-asset incumbency is the open question. The question of which coordination protocol wins is largely settled; the question of which bridge asset wins is not.</p>
+
   <div class="pullquote">
     Every specialized architecture in the stack is layer-locked by design. XRP is not. That is the structural asymmetry the thesis is pricing.
   </div>
@@ -616,7 +624,7 @@
 
   <h3 class="subheader">Layer one &middot; retail and SMB payments</h3>
 
-  <p>XRP is live at this layer through ODL corridors that aggregate retail remittance flow via regulated operators. SBI Remit at $800M/month to the Philippines is retail flow. Intermex at the US-Mexico corridor is retail flow. Coins.ph as the Philippine destination-side partner is retail flow. This is not a future plan — the operators exist, the corridors operate, and the destination-side payout into local currency happens billions of times per year. RLUSD extends the footprint into corridors where a dollar-pegged stablecoin is the right answer: BlackRock, Deutsche Bank, LMAX Group, Mastercard/WebBank/Gemini pilots, SBI's Q1 2026 Japan launch. Ripple Payments as a product is architected to route layer-one flow through XRP, RLUSD, or third-party stablecoins depending on corridor economics. Coverage expands as corridors are added.</p>
+  <p>XRP is live at this layer through ODL corridors that aggregate retail remittance flow via regulated operators. SBI Remit at $800M/month to the Philippines is retail flow. Intermex at the US-Mexico corridor is retail flow. Coins.ph as the Philippine destination-side partner is retail flow. This is not a future plan — the operators exist, the corridors operate, and the destination-side payout into local currency happens billions of times per year. RLUSD extends the footprint into corridors where a dollar-pegged stablecoin is the right answer: BlackRock, Deutsche Bank, LMAX Group, the Mastercard/WebBank/Gemini pilot for instant credit card settlement, SBI's Q1 2026 Japan launch. Distribution partners matter as much as infrastructure at this layer — Visa's stablecoin settlement rails, Mastercard's integration of RLUSD for card-network settlement, and global payment aggregators like Thunes (connecting 100+ countries) determine which infrastructure actually sees production flow. Ripple Payments as a product is architected to route layer-one flow through XRP, RLUSD, or third-party stablecoins depending on corridor economics. Coverage expands as corridors are added.</p>
 
   <h3 class="subheader">Layer two &middot; intra-credit-web institutional</h3>
 
@@ -701,7 +709,7 @@
 
   <p><strong>Non-CLS emerging-market institutional FX.</strong> CLS itself publicly estimates this at approximately $700 billion daily — currencies that are traded at institutional scale but not CLS-eligible. Vietnamese dong, Thai baht, Indonesian rupiah, Nigerian naira, Egyptian pound, Pakistani rupee, Bangladeshi taka, Turkish lira, Argentine peso, Colombian peso, many more. Not all of this is contestable — much is captured by regional arrangements — but a substantial subset is exactly the XRPL ODL use case at institutional scale.</p>
 
-  <p><strong>Cross-ledger tokenized asset settlement</strong> between Canton (DTCC securities), Ethereum L2s (stablecoins, many RWA tokens), Solana (Ondo RWAs, PayPal PYUSD), XRPL (RLUSD, ODL), Stellar (PYUSD, Franklin Templeton), Hyperledger Besu private chains (SWIFT ledger), and Fnality systems (central bank money). The addressable flow here is whatever portion of the tokenized RWA market routes cross-chain at peak-ticket size. RWA market size is $26B+ today, projected to $16T by 2030 by Standard Chartered and $30T by Ripple/BCG. Even 0.5% of the terminal market routing cross-chain at peak-ticket size is a very large number.</p>
+  <p><strong>Cross-ledger tokenized asset settlement.</strong> This is the primary structural driver of layer-five flow, and it is specifically the problem the DTCC patent contemplates. Tokenized collateral is becoming the dominant asset class in institutional crypto infrastructure: BlackRock's BUIDL at $2.8B+ AUM on Ethereum, Franklin Templeton's FOBXX on Stellar and Solana, Ondo's OUSG at $692M on Ethereum, the DTCC's tokenized U.S. Treasuries on Canton Network (MVP H1 2026). These instruments are not speculative assets — they are the emerging collateral and liquidity layer of institutional finance. The tokenized Treasury market alone reached $12.88B by early 2026 and is projected by Standard Chartered to reach $16T by 2030, with Ripple/BCG projecting $18.9T by 2033. A BlackRock BUIDL holder needing to settle atomically against an OUSG position on a different chain, or a Franklin Templeton Treasury fund token needing to post as collateral against a Canton-issued security, is exactly the layer-five peak-ticket routing problem — and there is no current institutional production architecture for it. Even 0.5% of the projected 2030 tokenized market routing cross-chain at peak-ticket size is a very large number.</p>
 
   <p><strong>Frontier-market institutional flows</strong> where the destination leg lacks both a regulated stablecoin and a tokenized deposit issuer — most of sub-Saharan Africa, parts of Southeast Asia, parts of Latin America. XRP's current ODL footprint already captures a slice of this; the addressable flow expands as tokenization extends into these markets without the corresponding institutional-grade dollar-backed alternatives.</p>
 
@@ -798,6 +806,10 @@
 
   <div class="pullquote">
     The settlement stack of 2030 is layered, not winner-take-all. Every specialized incumbent is locked to its layer. XRP is not. That structural asymmetry — plus the uncontested layer-five slot — is what the sizing math is pricing.
+  </div>
+
+  <div class="pullquote" style="border-left-color: var(--ink); margin-top: 28px;">
+    Layers one through four explain why XRP is used. Layer five explains why XRP must be expensive.
   </div>
 
   <div class="coda">
